@@ -1,2 +1,2 @@
 # proletor
-Criação de bots que executam trabalhos
+Bot manager running jobs
