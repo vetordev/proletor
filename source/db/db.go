@@ -5,14 +5,11 @@ import (
 	"gorm.io/gorm"
 )
 
-type Product struct {
-	gorm.Model
-
-	Code  string
-	Price uint
+type Database struct {
+	Connection *gorm.DB
 }
 
-func Connect() *gorm.DB {
+func Connect() *Database {
 	dsn := "host=localhost user=postgres password=postgre dbname=bot-job port=5432"
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 
@@ -20,9 +17,5 @@ func Connect() *gorm.DB {
 		panic("Error in connection")
 	}
 
-	db.AutoMigrate(&Product{})
-
-	db.Create(&Product{Code: "D42", Price: 100})
-
-	return db
+	return &Database{db}
 }
