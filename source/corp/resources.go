@@ -1,8 +1,10 @@
-package company
+package corp
+
+// IDENTIFICA OS TIPOS DE BOT APOS CARREGA-LOS
 
 import (
-	database "db"
-	"message"
+	"proletor/corp/job/message"
+	database "proletor/db"
 )
 
 type Resources struct {

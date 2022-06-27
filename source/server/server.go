@@ -1,23 +1,16 @@
 package server
 
 import (
-	Bot "bot"
-	"job"
-	"job/message"
-	"time"
+	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 func Serve() {
-	//router := gin.Default()
+	router := gin.Default()
 
-	//router.GET("/", func(c *gin.Context) {
-	//	c.Status(http.StatusOK)
-	//})
+	router.GET("/", func(c *gin.Context) {
+		c.Status(http.StatusOK)
+	})
 
-	messageJob := message.NewConsole(time.Now(), "Ola'!!!")
-	bot := Bot.New([]*job.Job{&messageJob})
-
-	bot.Start()
-
-	//router.Run(":8080")
+	router.Run(":8080")
 }

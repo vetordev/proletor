@@ -1,8 +1,8 @@
 package main
 
 import (
-	"db"
-	"server"
+	"proletor/db"
+	"proletor/server"
 )
 
 func main() {

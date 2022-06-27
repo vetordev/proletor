@@ -2,7 +2,7 @@ package message
 
 import (
 	"fmt"
-	"job"
+	"proletor/corp/job"
 	"time"
 )
 
@@ -12,7 +12,7 @@ type Console struct {
 }
 
 func (j Console) Start() {
-	fmt.Printf("An %s, %T", j.Content, j.Time)
+	fmt.Printf("An %s, %s", j.Content, j.Time)
 }
 
 func NewConsole(time time.Time, content string) job.Job {

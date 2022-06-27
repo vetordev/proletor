@@ -1,16 +1,16 @@
-package company
-
-import database "db"
+package corp
 
 type Boss struct {
 	name string
 }
 
 func (b *Boss) work() {
-	db := database.Connect()
-	resources := NewResources(db)
+	/*	db := database.Connect()
+		resources := NewResources(db)
 
-	resources.load()
+		resources.load()
+	*/
+
 }
 
 func NewBoss() *Boss {

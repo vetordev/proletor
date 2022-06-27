@@ -1,6 +1,6 @@
 package worker
 
-import "job"
+import "proletor/corp/job"
 
 type Bot struct {
 	jobs []*job.Job
